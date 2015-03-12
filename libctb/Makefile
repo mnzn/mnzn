@@ -28,9 +28,9 @@ define Build/Compile
     $(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
 endef
 
-#define Build/Install
-#	$(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile install
-#endef
+define Build/Install
+    $(call Build/Install/Default,install -C $(PKG_BUILD_DIR)/build)
+endef
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include
