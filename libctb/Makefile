@@ -45,11 +45,5 @@ define Package/libctb/install
     $(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.so $(1)/usr/lib/
 endef
 
-define Build/Configure
-endef
-
-define Build/Compile
-endef
-
 
 $(eval $(call BuildPackage,libctb))
