@@ -26,7 +26,7 @@ define Package/libctb/description
 endef
 
 define Build/Compile
-    $(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
+    $(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile install
 endef
 
 
