@@ -26,7 +26,7 @@ define Package/libctb/description
 endef
 
 define Build/Compile
-    (cd $(PKG_BUILD_DIR)/build/)
+    (cd $(PKG_BUILD_DIR)/build/);
     $(call Build/Compile/Default) 
 endef
 
