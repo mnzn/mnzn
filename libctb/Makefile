@@ -11,6 +11,7 @@ PKG_SOURCE_PROTO:=git
 PKG_SOURCE_VERSION:=master
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_INSTALL:=1
+PKG_BUILD_DEPENDS:=libc libpthread libstdc++
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -18,7 +19,6 @@ define Package/libctb
   SECTION:=libs
   CATEGORY:=Libraries
   TITLE:=libctb,a lib for gsmopen
-  DEPENDS:=+libc +libpthread +libstdc++
 endef
 
 define Package/libctb/description
