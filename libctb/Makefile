@@ -11,8 +11,9 @@ PKG_SOURCE_PROTO:=git
 PKG_SOURCE_VERSION:=master
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_INSTALL:=1
-PKG_BUILD_DEPENDS:=libc libpthread libstdc++
+#PKG_BUILD_DEPENDS:=libc libpthread libstdc++
 
+include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
 
 define Package/libctb
