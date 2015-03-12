@@ -39,11 +39,11 @@ endef
 #endef
 #
 #
-#define Package/libhttp-parser/install
-#    $(INSTALL_DIR) $(1)/usr/lib
-#    $(CP) $(PKG_BUILD_DIR)/libhttp_parser.so.* $(1)/usr/lib/
-#    ( cd $(1)/usr/lib ; ln -s libhttp_parser.so.* libhttp_parser.so )
-#endef
+define Package/libctb/install
+    $(INSTALL_DIR) $(1)/usr/lib
+    $(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.a $(1)/usr/lib/
+    $(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.so $(1)/usr/lib/
+endef
 
 define Build/Configure
 endef
