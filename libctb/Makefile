@@ -26,8 +26,8 @@ define Package/libctb/description
 endef
 
 define Build/Compile
-    (cd $(PKG_BUILD_DIR)/build/);
-    $(call Build/Compile/Default) 
+	(cd $(PKG_BUILD_DIR)/build/);
+	$(call Build/Compile/Default)
 endef
 
 
@@ -40,9 +40,9 @@ endef
 #
 #
 define Package/libctb/install
-    $(INSTALL_DIR) $(1)/usr/lib
-    $(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.a $(1)/usr/lib/
-    $(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.so $(1)/usr/lib/
+	$(INSTALL_DIR) $(1)/usr/lib
+	$(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.a $(1)/usr/lib/
+	$(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.so $(1)/usr/lib/
 endef
 
 
