@@ -35,19 +35,19 @@ define Build/Install
     $(call Build/Install/Default,install -C $(PKG_BUILD_DIR)/build)
 endef
 
-define Build/InstallDev
-	$(INSTALL_DIR) $(1)/usr/include
-	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_INSTALL_DIR)/usr/include $(1)/usr
-	$(CP) $(PKG_INSTALL_DIR)/usr/lib/lib$(PKG_NAME).{a,so*} $(1)/usr/lib/
-endef
+#define Build/InstallDev
+#	$(INSTALL_DIR) $(1)/usr/include
+#	$(INSTALL_DIR) $(1)/usr/lib
+#	$(CP) $(PKG_INSTALL_DIR)/usr/include $(1)/usr
+#	$(CP) $(PKG_INSTALL_DIR)/usr/lib/lib$(PKG_NAME).{a,so*} $(1)/usr/lib/
+#endef
 
 
-define Package/libctb/install
-	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.a $(1)/usr/lib/
-	$(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.so $(1)/usr/lib/
-endef
+#define Package/libctb/install
+#	$(INSTALL_DIR) $(1)/usr/lib
+#	$(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.a $(1)/usr/lib/
+#	$(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.so $(1)/usr/lib/
+#endef
 
 
 $(eval $(call BuildPackage,libctb))
