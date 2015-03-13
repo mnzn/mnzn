@@ -34,6 +34,7 @@ define Build/Compile
 	CROSS="true" \
 	CFLAGS="$(TARGET_CFLAGS)" \
 	CC="$(TARGET_CC)" \
+	CXX="$(TARGET_CROSS)g++" \
 	ARCH="$(ARCH)" \
 	LDFLAGS="$(TARGET_LDFLAGS)" \
 	$(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
