@@ -48,7 +48,7 @@ define Package/libctb/install
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libctb-0.16.a $(1)/usr/lib/
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libctb-0.16.so $(1)/usr/lib/
 	$(INSTALL_DIR) $(1)/usr/include
-	$(CP) $(PKG_INSTALL_DIR)/usr/local/include $(1)/usr/include/
+	$(CP) $(PKG_INSTALL_DIR)/usr/include $(1)/usr/include/
 
 endef
 
