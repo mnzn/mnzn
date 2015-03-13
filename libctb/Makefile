@@ -13,6 +13,9 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_INSTALL:=1
 #PKG_BUILD_DEPENDS:=libc libpthread libstdc++
 
+CC="$(TARGET_CC)"
+CXX="$(TARGET_CROSS)g++"
+
 include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
 
