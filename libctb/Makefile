@@ -36,8 +36,8 @@ define Build/Compile
 #	CXX="$(TARGET_CROSS)g++" \
 #	ARCH="$(ARCH)" \
 #	LDFLAGS="$(TARGET_LDFLAGS)" \
-#	$(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
-	$(call Build/Compile/Default -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile)
+	$(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
+#	$(call Build/Compile/Default -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile)
 endef
 
 define Build/Install
