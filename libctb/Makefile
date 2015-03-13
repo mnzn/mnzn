@@ -20,6 +20,7 @@ define Package/libctb
   SECTION:=libs
   CATEGORY:=Libraries
   TITLE:=libctb,a lib for gsmopen
+  DEPENDS:=+libstdc++ +libc +libpthread
 endef
 
 define Package/libctb/description
@@ -48,7 +49,7 @@ define Package/libctb/install
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libctb-0.16.a $(1)/usr/lib/
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libctb-0.16.so $(1)/usr/lib/
 	$(INSTALL_DIR) $(1)/usr/include
-	$(CP) $(PKG_INSTALL_DIR)/usr/include $(1)/usr/include/
+	$(CP) $(PKG_INSTALL_DIR)/usr/include $(1)/usr
 
 endef
 
