@@ -20,7 +20,7 @@ define Package/libctb
   SECTION:=libs
   CATEGORY:=Libraries
   TITLE:=libctb,a lib for gsmopen
-  DEPENDS:=+libstdc++ +libc +libpthread
+  DEPENDS:=$(CXX_DEPENDS) +libpthread
 endef
 
 define Package/libctb/description
