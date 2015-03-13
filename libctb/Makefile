@@ -35,7 +35,7 @@ define Build/Compile
 	CFLAGS="$(TARGET_CFLAGS)" \
 	CC="$(TARGET_CC)" \
 	ARCH="$(ARCH)" \
-	LDFLAGS="$(TARGET_LDFLAGS) \
+	LDFLAGS="$(TARGET_LDFLAGS)" \
 	$(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
 #	$(call Build/Compile/Default -C $(PKG_BUILD_DIR)/build)
 endef
