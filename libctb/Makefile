@@ -43,11 +43,14 @@ endef
 #endef
 
 
-#define Package/libctb/install
-#	$(INSTALL_DIR) $(1)/usr/lib
-#	$(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.a $(1)/usr/lib/
-#	$(CP) $(PKG_BUILD_DIR)/lib/libctb-0.16.so $(1)/usr/lib/
-#endef
+define Package/libctb/install
+	$(INSTALL_DIR) $(1)/usr/lib
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libctb-0.16.a $(1)/usr/lib/
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libctb-0.16.so $(1)/usr/lib/
+	$(INSTALL_DIR) $(1)/usr/include
+	$(CP) $(PKG_INSTALL_DIR)/usr/local/include $(1)/usr/include/
+
+endef
 
 
 $(eval $(call BuildPackage,libctb))
