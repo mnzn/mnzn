@@ -32,7 +32,7 @@ endef
 define Build/Compile
 #	CROSS="true" \
 #	CFLAGS="$(TARGET_CFLAGS)" \
-#	CXX="$(TARGET_CROSS)g++" \
+	CXX="$(TARGET_CROSS)g++" \
 #	ARCH="$(ARCH)" \
 #	LDFLAGS="$(TARGET_LDFLAGS)" \
 	$(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
