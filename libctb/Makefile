@@ -31,7 +31,12 @@ define Package/libctb/description
 endef
 
 define Build/Compile
-    $(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
+	CROSS="true" \
+	CFLAGS="$(TARGET_CFLAGS)" \
+	CC="$(TARGET_CC)" \
+	ARCH="$(ARCH)" \
+	LDFLAGS="$(TARGET_LDFLAGS) \
+	$(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
 #	$(call Build/Compile/Default -C $(PKG_BUILD_DIR)/build)
 endef
 
