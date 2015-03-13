@@ -28,7 +28,7 @@ endef
 
 define Build/Compile
 #    $(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
-	$(call Build/Compile/Default -f ./build/GNUmakefile)
+	$(call Build/Compile/Default -C $(PKG_BUILD_DIR)/build)
 endef
 
 define Build/Install
