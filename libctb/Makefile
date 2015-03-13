@@ -37,6 +37,8 @@ define Build/Compile
 	CXX="$(TARGET_CROSS)g++" \
 	ARCH="$(ARCH)" \
 	LDFLAGS="$(TARGET_LDFLAGS)" \
+	RANLIB="$(TARGET_CROSS)ranlib"
+	AR="$(TARGET_CROSS)ar"
 	$(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
 #	$(call Build/Compile/Default -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile)
 endef
