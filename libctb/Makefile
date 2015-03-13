@@ -14,6 +14,8 @@ PKG_INSTALL:=1
 PKG_BUILD_DEPENDS:=libpthread libstdcpp
 
 CXX="$(TARGET_CROSS)g++"
+RANLIB="$(TARGET_CROSS)ranlib"
+AR="$(TARGET_CROSS)ar"
 
 include $(INCLUDE_DIR)/package.mk
 
