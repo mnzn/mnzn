@@ -13,17 +13,16 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_INSTALL:=1
 #PKG_BUILD_DEPENDS:=libc libpthread libstdc++
 
-CC="$(TARGET_CC)"
 CXX="$(TARGET_CROSS)g++"
 
-include $(INCLUDE_DIR)/uclibc++.mk
+#include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
 
 define Package/libctb
   SECTION:=libs
   CATEGORY:=Libraries
   TITLE:=libctb,a lib for gsmopen
-  DEPENDS:=$(CXX_DEPENDS) +libstdcpp +libc +libpthread
+#  DEPENDS:=$(CXX_DEPENDS) +libstdcpp +libc +libpthread
 endef
 
 define Package/libctb/description
@@ -31,12 +30,11 @@ define Package/libctb/description
 endef
 
 define Build/Compile
-	CROSS="true" \
-	CFLAGS="$(TARGET_CFLAGS)" \
-	CC="$(TARGET_CC)" \
-	CXX="$(TARGET_CROSS)g++" \
-	ARCH="$(ARCH)" \
-	LDFLAGS="$(TARGET_LDFLAGS)" \
+#	CROSS="true" \
+#	CFLAGS="$(TARGET_CFLAGS)" \
+#	CXX="$(TARGET_CROSS)g++" \
+#	ARCH="$(ARCH)" \
+#	LDFLAGS="$(TARGET_LDFLAGS)" \
 	$(MAKE) -C $(PKG_BUILD_DIR)/build -f ./GNUmakefile
 #	$(call Build/Compile/Default -C $(PKG_BUILD_DIR)/build)
 endef
