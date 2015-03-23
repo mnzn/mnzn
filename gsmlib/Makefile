@@ -35,14 +35,14 @@ define Build/Configure
 endef
 
 define Build/Compile
-	CROSS="true" \
-	CFLAGS="$(TARGET_CFLAGS)" \
-	CXXFLAGS="$(TARGET_CFLAGS)" \
-	CXX="$(TARGET_CROSS)g++" \
-	ARCH="$(ARCH)" \
-	LDFLAGS="$(TARGET_LDFLAGS)" \
-	RANLIB="$(TARGET_CROSS)ranlib" \
-	AR="$(TARGET_CROSS)ar" \
+#	CROSS="true" \
+#	CFLAGS="$(TARGET_CFLAGS)" \
+#	CXXFLAGS="$(TARGET_CFLAGS)" \
+#	CXX="$(TARGET_CROSS)g++" \
+#	ARCH="$(ARCH)" \
+#	LDFLAGS="$(TARGET_LDFLAGS)" \
+#	RANLIB="$(TARGET_CROSS)ranlib" \
+#	AR="$(TARGET_CROSS)ar" \
 	$(call Build/Compile/Default)
 endef
 
