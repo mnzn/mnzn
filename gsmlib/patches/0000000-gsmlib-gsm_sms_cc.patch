@@ -1,0 +1,20 @@
+--- a/gsmlib/gsm_sms.cc
++++ b/gsmlib/gsm_sms.cc
+@@ -151,7 +151,7 @@ unsigned char SMSMessage::userDataLength() const
+   if (_dataCodingScheme.getAlphabet() == DCS_DEFAULT_ALPHABET)
+     return _userData.length() + (udhl ? ((1 + udhl) * 8 + 6) / 7 : 0);
+   else
+-    return _userData.length() + (udhl ? (1 + udhl) : 0);
++    return (_userData.length() + (udhl ? (1 + udhl) : 0))/2;
+ }
+ 
+ ostream& SMSMessage::operator<<(ostream& s)
+@@ -414,7 +414,7 @@ string SMSSubmitMessage::encode()
+   if (_dataCodingScheme.getAlphabet() == DCS_DEFAULT_ALPHABET)
+     e.setString(latin1ToGsm(_userData));
+   else
+-    e.setOctets((unsigned char*)_userData.data(), _userData.length());
++    return e.getHexString() + _userData;
+   return e.getHexString();
+ }
+ 
